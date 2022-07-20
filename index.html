@@ -250,25 +250,42 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" id="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" id="email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Subject" id="subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.." id="message" required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
                         </div>
                     </form>
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script>
+                        function sendEmail() {
+                            Email.send({
+                                SecureToken: "0afaa0d1-13de-487f-b894-f68872aa18a0",
+                                To: 'rohanshrstha@gmail.com',
+                                From: document.getElementById("email").value,
+                                Subject: "New Message in your Website",
+                                Body: "Name: " + document.getElementById("name").value +
+                                    "<br> Email: " + document.getElementById("email").value +
+                                    "<br> Subject: " + document.getElementById("subject").value +
+                                    "<br> Message: " + document.getElementById("message").value
+                            }).then(
+                                message => alert("Message Sent Successfully")
+                            );
+                        }
+                    </script>
                 </div>
             </div>
         </div>
