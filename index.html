@@ -82,6 +82,21 @@
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
+                        <img src="images/6.jpg" alt="" width="300px">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/7.jpg" alt="" width="300px">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/8.jpg" alt="" width="300px">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
                         <img src="images/1.jpeg" alt="" width="300px">
                     </div>
                 </div>
@@ -232,18 +247,19 @@
                                 <div class="sub-title">Kathmandu, Nepal</div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="margin-left: -5px;">
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">rohanshrstha@gmail.com</div>
+
+                                <div class="sub-title"><a href="mailto:rohanshrstha@gmail.com">rohanshrstha@gmail.com</a></div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="margin-left: -5px;">
                             <i class="fas fa-phone-alt"></i>
                             <div class="info">
                                 <div class="head">Phone</div>
-                                <div class="sub-title">+977 9803526339</div>
+                                <div class="sub-title"><a href="tel:9803526339">+977 9803526339</a></div>
                             </div>
                         </div>
                     </div>
@@ -273,7 +289,10 @@
                     <script>
                         function sendEmail() {
                             Email.send({
-                                SecureToken: "0afaa0d1-13de-487f-b894-f68872aa18a0",
+                                Host: "smtp@gmail.com",
+                                Username: "rohanshrstha@gmail.com",
+                                Password: "uNNKRTvt@F@vz8z",
+                                // SecureToken: "0afaa0d1-13de-487f-b894-f68872aa18a0",
                                 To: 'rohanshrstha@gmail.com',
                                 From: document.getElementById("email").value,
                                 Subject: "New Message in your Website",
@@ -300,7 +319,7 @@
             <a href="https://twitter.com/RShrstha"><i class="ri-twitter-line icon"></i></a>
             <a href="https://github.com/MrBakaista"><i class="ri-github-line icon"></i></a>
         </div>
-        <p class="end"> Copyright © Rohan Shrestha 2022</p>
+        <p class="end"> Copyright © <a href="index.html" style="color: tomato;"> Rohan Shrestha</a> 2022 </p>
 
     </footer>
 
