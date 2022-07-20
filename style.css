@@ -807,15 +807,15 @@ footer {
         position: fixed;
         height: 60vh;
         width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
+        top: -100%;
+        left: 0;
+        background: rgb(43, 43, 43);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
     }
     .navbar .menu.active {
-        left: 0;
+        top: 0;
     }
     .navbar .menu li {
         display: block;
