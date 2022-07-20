@@ -805,7 +805,7 @@ footer {
     }
     .navbar .menu {
         position: fixed;
-        height: 100vh;
+        height: 60vh;
         width: 100%;
         left: -100%;
         top: 0;
