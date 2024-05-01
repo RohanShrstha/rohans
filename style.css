@@ -842,7 +842,9 @@ body .body-overlay {
     opacity: 0.3;
 }
 
-
+.description{
+    text-align: justify;
+}
 
 /* 10 - About */
 .about-area {
