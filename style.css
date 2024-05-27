@@ -1,37 +1,5 @@
-
-/* 
-    -- Table of Content --
-
-    * 01 - Menu
-    * 02 - Responsive Sidebar Menu
-    * 03 - Global Color
-    * 04 - Header
-    * 05 - Section Header
-    * 06 - Left Sidebar
-    * 07 - Hero Section
-    * 08 - Home 3
-    * 09 - Home 5
-    * 10 - About
-    * 11 - Resume
-    * 12 - Services
-    * 13 - Skills
-    * 14 - Portfolio
-    * 15 - Testimonial
-    * 16 - Client
-    * 17 - Pricing Table
-    * 18 - Contact
-    * 19 - Breadcrumb
-    * 20 - Blog items
-    * 21 - Blog Style 2
-    * 22 - Blog Details
-    * 23 - Comment
-    * 24 - Comment Form
-    * 25 - Footer
-    * @Keyframe
-
-*/
 :root {
-    --primary_color: #28e98c;
+    --primary_color: #00fff7;
 }
 *,*::before,*::after {
     margin: 0;
@@ -43,7 +11,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
-    color: #999999;
+    color: #ffffff;
     background: #1f1f1f;
     line-height: 1.7;
     overflow-x: hidden;
@@ -133,25 +101,36 @@ ul {
     align-items: center;
     justify-content: center;
 }
-.page-loader .bounceball {
+
+.loader {
+    width: fit-content;
+    font-size: 30px;
+    font-family: monospace;
+    line-height: 1.4;
+    font-weight: bold;
+    --c: no-repeat linear-gradient(#ffffff 0 0); 
+    background: var(--c),var(--c),var(--c),var(--c),var(--c),var(--c),var(--c);
+    background-size: calc(1ch + 1px) 100%;
+    border-bottom: 10px solid #006e7200; 
     position: relative;
-    display: inline-block;
-    height: 37px;
-    width: 15px;
-}
-.page-loader .bounceball:before {
-    position: absolute;
-    content: '';
-    display: block;
-    top: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #fff;
-    transform-origin: 50%;
-    animation: bounceLoader 500ms alternate infinite ease;
+    animation: l8-0 1.1s infinite linear;
+    clip-path: inset(-200px 0);
 }
 
+.loader::before {
+    content: "MrBaka";
+}
+
+.loader::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    background: #25adda;
+    left: -10px;
+    bottom: 100%;
+    animation: l8-1 1.25s infinite linear;
+}
 
 /* Icon Menu */
 .icon-menu {
@@ -1967,21 +1946,19 @@ body .body-overlay {
     }
 }
 
-@keyframes bounceLoader {
-    0% {
-        top: 30px;
-        height: 5px;
-        border-radius: 60px 60px 20px 20px;
-        transform: scaleX(2);
-    }
-    35% {
-        height: 15px;
-        border-radius: 50%;
-        transform: scaleX(1);
-    }
-    100% {
-        top: 0;
-    }
+@keyframes l8-0 {
+    0%, 12.5% {background-position: calc(0*100%/6) 0, calc(1*100%/6) 0, calc(2*100%/6) 0, calc(3*100%/6) 0, calc(4*100%/6) 0, calc(5*100%/6) 0, calc(6*100%/6) 0}
+    25% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 0, calc(2*100%/6) 0, calc(3*100%/6) 0, calc(4*100%/6) 0, calc(5*100%/6) 0, calc(6*100%/6) 0}
+    37.5% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 40px, calc(2*100%/6) 0, calc(3*100%/6) 0, calc(4*100%/6) 0, calc(5*100%/6) 0, calc(6*100%/6) 0}
+    50% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 40px, calc(2*100%/6) 40px, calc(3*100%/6) 0, calc(4*100%/6) 0, calc(5*100%/6) 0, calc(6*100%/6) 0}
+    62.5% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 40px, calc(2*100%/6) 40px, calc(3*100%/6) 40px, calc(4*100%/6) 0, calc(5*100%/6) 0, calc(6*100%/6) 0}
+    75% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 40px, calc(2*100%/6) 40px, calc(3*100%/6) 40px, calc(4*100%/6) 40px, calc(5*100%/6) 0, calc(6*100%/6) 0}
+    87.4% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 40px, calc(2*100%/6) 40px, calc(3*100%/6) 40px, calc(4*100%/6) 40px, calc(5*100%/6) 40px, calc(6*100%/6) 0}
+    100% {background-position: calc(0*100%/6) 40px, calc(1*100%/6) 40px, calc(2*100%/6) 40px, calc(3*100%/6) 40px, calc(4*100%/6) 40px, calc(5*100%/6) 40px, calc(6*100%/6) 40px}
+}
+
+@keyframes l8-1 {
+    100% {left: 115%}
 }
 
 /*Additional CSS*/
